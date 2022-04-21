@@ -1,6 +1,6 @@
 
 
-// A Simple program to show Youtube & Instagram subscribers
+// A Simple program to show Instagram and Facebook subscribers
 // Credit to Roberto Delgado who wrote most of the code. I have just changed a few lines of it. 
 
 
@@ -14,8 +14,7 @@
 #include <WiFiClientSecure.h>
 #include "JsonStreamingParser.h"
 #include <ArduinoJson.h>
-#include "theSwedishMaker.h"
-
+#include "fonts.h"
 #include "InstagramStats.h"
 
 
@@ -37,10 +36,11 @@ const uint16_t WAIT_TIME = 60000; //Time between fecthing data.
 // Arbitrary output pins
 MD_Parola P = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 
-String INSTAGRAM_ACCESS_TOKEN = "EAAFZAqm0nbB0BAMf469ZADX1NbPuyPDiPNFilWHtwPWtdesh6VW1qkZArnuZCEFza495HlcZBrt0B69AKuFdsqnVpuOwca3iLkFpap8KEkxECWdCCwZA7CJjliZAxzzu8ZB0QHaTaN6PIdZBzfOrvujycJiHWAoLJRHv5gpiZAM0nYLIFPuLtbk8hZAS6RnmMyT6VDlIaOpQDQCMwZDZD";
-String IG_USER_ID = "17841431535273762";
-String FB_USER_ID = "112229417070625";
-String FACEBOOK_ACCESS_TOKEN = INSTAGRAM_ACCESS_TOKEN;
+String INSTAGRAM_ACCESS_TOKEN = "YOUR INSTAGRAM ACCESS TOKEN HERE";
+String IG_USER_ID = "YOUR INSTAGRAM USER ID HERE";
+String FACEBOOK_ACCESS_TOKEN = "YOUR FACEBOOK ACCESS TOKEN HERE";
+String FB_USER_ID = "YOUR FACEBOOK USER ID HERE";
+
 
 
 WiFiClientSecure client; //For ESP8266 boards
@@ -52,8 +52,8 @@ InstagramStats instaStats(client, INSTAGRAM_ACCESS_TOKEN, IG_USER_ID);
 // Configuration of router settings
 // =======================================================================
 
-const char* ssid     = "Guest";      // SSID of local network
-const char* password = "MY-PC-ER";                // Password on network
+const char* ssid     = "YOUR WIFI NETWORK HERE";      // SSID of local network
+const char* password = "YOUR WIFI PASSWORD HERE";                // Password on network
 
 
 void setup() 
